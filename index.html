@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maqueta · Plataforma IEEE ESPOCH</title>
+<meta name="description" content="Maqueta navegable de la plataforma de la Rama Estudiantil IEEE ESPOCH: sitio público y área de directivos con tablero SCRUM, modo oscuro, vista móvil y comentarios.">
+<link rel="icon" href="img/marca/llama-azul.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_EC">
+<meta property="og:title" content="Plataforma IEEE ESPOCH · maqueta v3">
+<meta property="og:description" content="Maqueta navegable del sitio público y el área de directivos de la Rama Estudiantil IEEE ESPOCH. Explórala y deja tus comentarios.">
+<meta property="og:url" content="https://damianypg.github.io/maqueta-ieee-espoch/">
+<meta property="og:image" content="https://damianypg.github.io/maqueta-ieee-espoch/img/fotos/hero-grupo-escalinata.webp">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:width" content="1440">
+<meta property="og:image:height" content="1134">
+<meta property="og:image:alt" content="Integrantes de la Rama Estudiantil IEEE ESPOCH reunidos en una escalinata">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<script src="js/app.js" defer></script>
+</head>
+<body>
+
+<!-- Iconos (contorno, 24 × 24) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-dash" viewBox="0 0 24 24"><path d="M4 4h6v8h-6z M14 4h6v4h-6z M14 12h6v8h-6z M4 16h6v4h-6z"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z M16 3v4 M8 3v4 M4 11h16"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M18 8a3 3 0 0 1 0 6 M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5 M12 8l4.5 -3.5a1 1 0 0 1 1.5 .8v13.4a1 1 0 0 1 -1.5 .8l-4.5 -3.5h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4 M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0 M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2 M16 3.13a4 4 0 0 1 0 7.75 M21 21v-2a4 4 0 0 0 -3 -3.85"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z M9 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0 M15 8h2 M15 12h2 M7 16h10"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/></symbol>
+  <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z M4 13h3l3 3h4l3 -3h3"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0 M21 21l-6 -6"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6 M9 17v1a3 3 0 0 0 6 0v-1"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0 M3 12h1 M20 12h1 M12 3v1 M12 20v1 M5.6 5.6l.7 .7 M17.7 17.7l.7 .7 M5.6 18.4l.7 -.7 M17.7 6.3l.7 -.7"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14 M5 12h14"/></symbol>
+  <symbol id="i-sel" viewBox="0 0 24 24"><path d="M8 9l4 -4l4 4 M16 15l-4 4l-4 -4"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6l-6 6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6l6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6l6 -6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M5 12h14 M5 12l6 6 M5 12l6 -6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14 M13 6l6 6l-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0 M12 7v5l3 3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z M8 11v-4a4 4 0 1 1 8 0v4"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6l-12 12 M6 6l12 12"/></symbol>
+  <symbol id="i-sub" viewBox="0 0 24 24"><path d="M3.5 5.5l1.5 1.5l2.5 -2.5 M3.5 11.5l1.5 1.5l2.5 -2.5 M3.5 17.5l1.5 1.5l2.5 -2.5 M11 6h9 M11 12h9 M11 18h9"/></symbol>
+  <symbol id="i-dots" viewBox="0 0 24 24"><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0 M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0 M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4 M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z M12 16h.01"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M12 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0 M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z M3 7l9 6l9 -6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16 M4 12h16 M4 18h16"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2 M9 12h12l-3 -3 M18 15l3 -3"/></symbol>
+  <symbol id="i-comment" viewBox="0 0 24 24"><path d="M8 9h8 M8 13h6 M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z M7 20h10 M9 16v4 M15 16v4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z M11 4h2 M12 17v.01"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0 M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2 M7 11l5 5l5 -5 M12 4v12"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2 M7 9l5 -5l5 5 M12 4v12"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16 M10 11v6 M14 11v6 M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12 M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"/></symbol>
+</svg>
+
+<!-- Barra de presentación (no es parte del diseño) -->
+<header class="pres">
+  <div class="pres-brand">IEEE ESPOCH <small>· maqueta v3 para revisión</small></div>
+  <nav class="pres-tabs" aria-label="Pantallas de la maqueta">
+    <a href="#inicio">Inicio público</a>
+    <a href="#resumen">Resumen</a>
+    <a href="#tablero">Tablero</a>
+    <a href="#personas">Personas</a>
+  </nav>
+  <span class="pres-sp"></span>
+  <div class="pres-group" role="group" aria-label="Tema">
+    <button type="button" data-theme-set="light" aria-pressed="true"><svg class="ic"><use href="#i-sun"/></svg>Claro</button>
+    <button type="button" data-theme-set="dark" aria-pressed="false"><svg class="ic"><use href="#i-moon"/></svg>Oscuro</button>
+  </div>
+  <div class="pres-group" role="group" aria-label="Vista">
+    <button type="button" data-view-set="desktop" aria-pressed="true"><svg class="ic"><use href="#i-monitor"/></svg>Escritorio</button>
+    <button type="button" data-view-set="mobile" aria-pressed="false"><svg class="ic"><use href="#i-phone"/></svg>Móvil</button>
+  </div>
+  <button type="button" class="pres-btn" id="btn-comment" aria-pressed="false"><svg class="ic"><use href="#i-comment"/></svg>Comentar</button>
+  <button type="button" class="pres-btn" id="btn-panel" aria-expanded="false" aria-controls="cpanel">Comentarios <span class="pres-count" id="ccount">0</span></button>
+</header>
+<div class="hint" role="status">Modo comentario: haz clic en cualquier parte de la pantalla para dejar tu opinión. <button type="button" id="btn-comment-off">Salir (Esc)</button></div>
+
+<main class="stage-wrap">
+<div class="stage" id="stage" data-view="desktop">
+
+<!-- ========================= INICIO PÚBLICO ========================= -->
+<section class="screen zp" data-screen="inicio" aria-label="Inicio público">
+  <header class="hero">
+    <div class="wrap">
+      <div class="top">
+        <a class="top-logo" href="#inicio" aria-label="Inicio de la Rama Estudiantil IEEE ESPOCH"><img src="img/marca/llama-blanco.png" alt=""></a>
+        <nav class="top-nav t17" aria-label="Secciones del sitio">
+          <a class="uline" href="#inicio">Nosotros</a><a class="uline" href="#inicio">Capítulos</a><a class="uline" href="#inicio">Eventos</a><a class="uline" href="#inicio">Galería</a><a class="uline" href="#inicio">Únete</a>
+        </nav>
+        <a class="btn btn-ghost top-login" href="#resumen" style="height:44px;padding:0 16px;font-size:.875rem">Ingresar</a>
+        <button type="button" class="btn btn-ghost top-menu" style="height:44px;padding:0 16px;font-size:.875rem" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg>Menú</button>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <img class="hero-logo in1" src="img/marca/ieee-espoch-blanco.png" alt="Rama Estudiantil IEEE ESPOCH">
+          <h1 class="d t48 in2">La comunidad de ingeniería y tecnología de la ESPOCH</h1>
+          <p class="t17 hero-sub in3">Rama Estudiantil de IEEE, la mayor organización técnica del mundo, en la Escuela Superior Politécnica de Chimborazo.</p>
+          <div class="ctas in4">
+            <a class="btn btn-white" href="#inicio">Únete a la rama</a>
+            <a class="btn btn-ghost" href="#eventos">Ver próximos eventos</a>
+          </div>
+        </div>
+        <figure class="hero-photo reveal-photo">
+          <img src="img/fotos/hero-grupo-escalinata.webp" width="1440" height="1134" alt="Decenas de integrantes de la rama posan en una escalinata al aire libre con las banderas de la ESPOCH y de Women in Engineering.">
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec" style="padding-bottom:96px" aria-labelledby="h-cifras">
+    <div class="wrap">
+      <h2 id="h-cifras" class="t17" style="font-weight:700;color:var(--muted);margin-bottom:32px">La rama en cifras</h2>
+      <div class="stats" id="stats"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="eventos" style="background:var(--band)" aria-labelledby="h-eventos">
+    <div class="wrap">
+      <div class="sec-head rv"><h2 id="h-eventos" class="d t48">Próximos eventos</h2><a class="more" href="#inicio"><span class="uline">Ver todos los eventos</span><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      <div class="grid3" id="events"></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-cap">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:16px">
+          <h2 id="h-cap" class="d t48" style="font-weight:700;color:var(--head)">10 comunidades, una rama</h2>
+          <p class="t17" style="color:var(--muted);max-width:52ch">Ocho capítulos técnicos y dos grupos de afinidad, cada uno con su directiva y sus proyectos.</p>
+        </div>
+        <a class="more" href="#inicio"><span class="uline">Ver los 10</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="grid3 caps" id="caps"></div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--band)" aria-labelledby="h-vol">
+    <div class="wrap vol">
+      <figure class="vol-photo rimg"><svg class="ic"><use href="#i-user"/></svg><figcaption class="t14">[Retrato real del voluntario, 4:5]</figcaption></figure>
+      <div class="vol-copy rv">
+        <h2 id="h-vol" class="t17">Voluntario del mes · [mes 2026]</h2>
+        <div><p class="d t48 vol-name">[Nombre Apellido]</p><p class="t17" style="color:var(--muted);margin-top:8px">[Capítulo] · [Cargo]</p></div>
+        <blockquote class="d t32 vol-quote">“[Una cita breve, en sus propias palabras, de máximo veinte palabras.]”</blockquote>
+        <p class="t17" style="max-width:52ch"><strong>Este mes:</strong> [qué hizo por la rama, en una línea].</p>
+        <a class="more" href="#inicio"><span class="uline">Conoce a la directiva</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-tl">
+    <div class="wrap">
+      <div class="sec-head rv"><h2 id="h-tl" class="d t48">Lo que hicimos en 2026</h2><a class="more" href="#inicio"><span class="uline">Nuestra historia</span><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      <div class="tl-wrap"><span class="tl-line drw" aria-hidden="true"></span><ol class="tl" id="milestones"></ol></div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--band)" aria-labelledby="h-gal">
+    <div class="wrap">
+      <div class="sec-head rv"><h2 id="h-gal" class="d t48">La rama en fotos</h2><a class="more" href="#inicio"><span class="uline">Ver la galería</span><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      <div class="gal" id="gallery"></div>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="h-close">
+    <div class="wrap sec close-in">
+      <div class="close-copy rv">
+        <h2 id="h-close" class="d t80">Únete a la rama.</h2>
+        <p class="t17">Si estudias en la ESPOCH, hay un capítulo para ti. Nuestra coordinación de membresías te acompaña en el proceso.</p>
+      </div>
+      <div class="ctas rv">
+        <a class="btn btn-close-white" href="#inicio">Únete a la rama</a>
+        <a class="btn btn-close-ghost" href="#inicio">Escríbenos</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img class="logo-light" src="img/marca/ieee-espoch-azul.png" alt="Rama Estudiantil IEEE ESPOCH">
+          <img class="logo-dark" src="img/marca/ieee-espoch-blanco.png" alt="Rama Estudiantil IEEE ESPOCH">
+          <p>Rama Estudiantil IEEE de la Escuela Superior Politécnica de Chimborazo. Riobamba, Ecuador.</p>
+        </div>
+        <nav aria-labelledby="f1"><h3 id="f1">Explora</h3><ul><li><a class="uline" href="#inicio">Nosotros</a></li><li><a class="uline" href="#inicio">Capítulos</a></li><li><a class="uline" href="#inicio">Eventos</a></li><li><a class="uline" href="#inicio">Galería</a></li></ul></nav>
+        <nav aria-labelledby="f2"><h3 id="f2">Contacto</h3><ul><li><a class="uline" href="#inicio">[correo de la rama]</a></li><li><a class="uline" href="#inicio">Instagram</a></li><li><a class="uline" href="#inicio">Facebook</a></li></ul></nav>
+        <nav aria-labelledby="f3"><h3 id="f3">IEEE</h3><ul><li><a class="uline" href="#inicio">ieee.org</a></li><li><a class="uline" href="#inicio">Declaración de accesibilidad</a></li><li><a class="uline" href="#inicio">Aviso de privacidad</a></li></ul></nav>
+      </div>
+      <div class="foot-bottom"><span>© 2026 Rama Estudiantil IEEE ESPOCH</span><a class="uline" href="#resumen">Ingresar al área de directivos</a></div>
+    </div>
+  </footer>
+</section>
+
+<!-- ========================= RESUMEN ========================= -->
+<section class="screen za" data-screen="resumen" aria-label="Resumen del área de directivos">
+  <div class="shell">
+    <aside class="sb" data-active="resumen"></aside>
+    <div class="main">
+      <div class="topbar" data-crumb="Mi espacio|Resumen"></div>
+      <div class="content">
+        <div class="page-head">
+          <div><h1>Buenas tardes, Yosef</h1><p>Hoy tienes 2 entregas y 3 solicitudes por revisar.</p></div>
+          <button type="button" class="abtn abtn-p" data-open="tarea"><svg class="ic"><use href="#i-plus"/></svg>Nueva tarea</button>
+        </div>
+        <section class="strip" aria-label="Cifras de la rama">
+          <div><span>Miembros activos</span><b>220<small>+6 este mes</small></b></div>
+          <div><span>Eventos este mes</span><b>4<small>2 por venir</small></b></div>
+          <div><span>Tareas abiertas</span><b>23<small>en 3 proyectos</small></b></div>
+          <div class="bad"><span>Tareas vencidas</span><b>2<small>una es tuya</small></b></div>
+        </section>
+        <div class="cols">
+          <div class="col">
+            <section class="panel-card" aria-labelledby="h-week">
+              <div class="pc-head">
+                <h2 id="h-week">Tu semana <small>16 – 20 nov</small></h2>
+                <div class="seg" role="group" aria-label="Filtrar la semana" id="week-filter">
+                  <button type="button" aria-pressed="true" data-f="all">Todo</button>
+                  <button type="button" aria-pressed="false" data-f="meet">Reuniones y eventos</button>
+                  <button type="button" aria-pressed="false" data-f="due">Entregas</button>
+                </div>
+              </div>
+              <div class="week" id="week"></div>
+            </section>
+            <section class="panel-card" aria-labelledby="h-proj">
+              <div class="pc-head"><h2 id="h-proj">¿Cómo van los proyectos?</h2><a class="alink" href="#tablero">Ver proyectos</a></div>
+              <div id="projects"></div>
+            </section>
+          </div>
+          <aside class="col">
+            <section class="panel-card" aria-labelledby="h-tasks">
+              <div class="pc-head"><h2 id="h-tasks">Mis tareas</h2></div>
+              <div class="list" id="tasks"></div>
+            </section>
+            <section class="panel-card" aria-labelledby="h-act">
+              <div class="pc-head"><h2 id="h-act">Esperan una acción tuya</h2></div>
+              <div class="list" id="actions"></div>
+            </section>
+          </aside>
+        </div>
+      </div>
+      <nav class="bnav" data-bnav="resumen" aria-label="Navegación principal"></nav>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= TABLERO ========================= -->
+<section class="screen za" data-screen="tablero" aria-label="Tablero del proyecto">
+  <div class="shell">
+    <aside class="sb" data-active="tablero"></aside>
+    <div class="main">
+      <div class="topbar" data-crumb="Proyectos|CONESLAT 2026"></div>
+      <div class="content">
+        <a class="back" href="#resumen"><svg class="ic"><use href="#i-back"/></svg>Proyectos</a>
+        <div class="proj-head">
+          <div class="proj-title">
+            <h1>CONESLAT 2026 <span class="pill st-ok">En curso</span></h1>
+            <div class="proj-meta">
+              <span>Rama IEEE ESPOCH</span><span>Entrega 20 nov</span><span>Actualizado hace 12 min</span>
+              <span style="display:flex;align-items:center;gap:8px"><span class="bar" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" aria-label="Avance del proyecto"><i style="width:62%"></i></span><b style="color:var(--text)">62 %</b></span>
+            </div>
+          </div>
+          <div class="stack"><span class="av av-a">YP</span><span class="av av-b">AT</span><span class="av av-c">MR</span><span class="av av-a">LC</span><span class="av" style="background:var(--pill-bg);color:var(--muted)">+8</span></div>
+          <button type="button" class="abtn abtn-s">Invitar</button>
+          <button type="button" class="abtn abtn-p" data-open="tarea"><svg class="ic"><use href="#i-plus"/></svg>Nueva tarea</button>
+        </div>
+        <nav class="tabs" aria-label="Secciones del proyecto">
+          <a href="#tablero">Resumen</a><a href="#tablero" aria-current="page">Tablero</a><a href="#tablero">Lista</a><a href="#tablero">Calendario</a><a href="#tablero">Equipo</a><a href="#tablero">Actividad</a>
+        </nav>
+        <div class="filters">
+          <button type="button" class="fbtn">Comisión: Todas<svg class="ic"><use href="#i-down"/></svg></button>
+          <button type="button" class="fbtn">Persona: Todas<svg class="ic"><use href="#i-down"/></svg></button>
+          <label class="fchk"><input type="checkbox" id="only-mine">Solo las mías</label>
+          <span style="flex:1"></span>
+          <span class="muted" style="font-size:13px" id="board-count"></span>
+        </div>
+        <div class="board" id="board"></div>
+        <p class="muted" style="font-size:13px">Prueba: abre el menú <b>⋮</b> de cualquier tarjeta y usa «Mover a…». Así se mueve una tarea sin arrastrar (WCAG 2.5.7).</p>
+      </div>
+      <nav class="bnav" data-bnav="tablero" aria-label="Navegación principal"></nav>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PERSONAS ========================= -->
+<section class="screen za" data-screen="personas" aria-label="Personas">
+  <div class="shell">
+    <aside class="sb" data-active="personas"></aside>
+    <div class="main">
+      <div class="topbar" data-crumb="Administración|Personas"></div>
+      <div class="content">
+        <div class="page-head">
+          <div><h1>Personas</h1><p>54 cuentas en 10 unidades.</p></div>
+          <button type="button" class="abtn abtn-p"><svg class="ic"><use href="#i-mail"/></svg>Invitar persona</button>
+        </div>
+        <nav class="tabs" aria-label="Secciones"><a href="#personas" aria-current="page">Personas <span class="muted">54</span></a><a href="#personas">Solicitudes <span class="pill st-ok">3</span></a><a href="#personas">Cargos</a></nav>
+        <div class="pgrid">
+          <section class="panel-card" aria-label="Lista de personas">
+            <div class="toolbar">
+              <label class="search"><svg class="ic"><use href="#i-search"/></svg><input type="search" placeholder="Buscar por nombre o correo" aria-label="Buscar personas" id="psearch"></label>
+              <button type="button" class="fbtn">Unidad: Todas<svg class="ic"><use href="#i-down"/></svg></button>
+              <button type="button" class="fbtn">Estado: Todos<svg class="ic"><use href="#i-down"/></svg></button>
+            </div>
+            <div class="ptable-wrap">
+              <table class="ptable">
+                <thead><tr><th scope="col">Nombre</th><th scope="col">Unidad</th><th scope="col">Cargo</th><th scope="col">Estado</th><th scope="col">Último acceso</th></tr></thead>
+                <tbody id="people"></tbody>
+              </table>
+            </div>
+            <div class="tfoot"><span id="pcount"></span><span style="display:flex;gap:8px"><button type="button" class="abtn abtn-s abtn-sm">Anterior</button><button type="button" class="abtn abtn-s abtn-sm">Siguiente</button></span></div>
+          </section>
+          <aside class="panel-card detail" id="pdetail" aria-live="polite"></aside>
+        </div>
+      </div>
+      <nav class="bnav" data-bnav="personas" aria-label="Navegación principal"></nav>
+    </div>
+  </div>
+</section>
+
+<div class="hl" id="hl" aria-hidden="true"></div>
+<div class="pins" id="pins"></div>
+</div>
+</main>
+
+<!-- Diálogo: Nueva tarea -->
+<div class="modal za" id="m-tarea" role="dialog" aria-modal="true" aria-labelledby="dlg-t">
+  <div class="dlg">
+    <div class="dlg-h"><div><h2 id="dlg-t">Nueva tarea</h2><span>En CONESLAT 2026</span></div><button type="button" class="iconbtn" data-close aria-label="Cerrar"><svg class="ic"><use href="#i-x"/></svg></button></div>
+    <div class="dlg-b">
+      <label class="fld">Título<input type="text" value="Confirmar ponente de inteligencia artificial"></label>
+      <div class="fld"><span id="lbl-com">Comisión</span><div class="chips" role="radiogroup" aria-labelledby="lbl-com" id="com-chips"></div></div>
+      <div class="two">
+        <div class="fld"><span id="lbl-pri">Prioridad</span><div class="seg" role="radiogroup" aria-labelledby="lbl-pri" id="pri-seg"><button type="button" role="radio" aria-checked="false">Baja</button><button type="button" role="radio" aria-checked="true">Media</button><button type="button" role="radio" aria-checked="false">Alta</button></div></div>
+        <label class="fld">Fecha límite<input type="text" value="19 nov 2026"></label>
+      </div>
+      <div class="fld"><span>Responsable</span><button type="button" class="who"><span class="av av-b av-sm">AT</span><span>Ana Torres <span class="muted">· Ponentes</span></span><svg class="ic"><use href="#i-down"/></svg></button><span class="muted" style="font-weight:400">Recientes: Mateo Ríos, Lucía Cárdenas</span></div>
+      <div class="fld"><span>Subtareas</span>
+        <label class="sub"><input type="checkbox" checked>Enviar la invitación</label>
+        <label class="sub"><input type="checkbox">Recibir la confirmación y la foto</label>
+        <button type="button" class="addsub"><svg class="ic"><use href="#i-plus"/></svg>Añadir subtarea</button>
+      </div>
+    </div>
+    <div class="dlg-f"><span>La creas como Yosef Puetate · Chair</span><button type="button" class="abtn abtn-s" data-close>Cancelar</button><button type="button" class="abtn abtn-p" data-close>Crear tarea</button></div>
+  </div>
+</div>
+
+<!-- Formulario de comentario -->
+<form class="cform" id="cform" aria-labelledby="cf-h" novalidate>
+  <h3 id="cf-h">Tu comentario</h3>
+  <p class="about" id="cf-about"></p>
+  <div class="ctype" role="radiogroup" aria-label="Tipo de comentario" id="cf-type">
+    <button type="button" role="radio" aria-checked="false" data-t="like">Me gusta</button>
+    <button type="button" role="radio" aria-checked="true" data-t="change">Cambiar</button>
+    <button type="button" role="radio" aria-checked="false" data-t="ask">Duda</button>
+  </div>
+  <label class="sr" for="cf-name">Tu nombre</label>
+  <input id="cf-name" type="text" placeholder="Tu nombre" autocomplete="name">
+  <label class="sr" for="cf-text">Comentario</label>
+  <textarea id="cf-text" placeholder="¿Qué cambiarías o qué te gusta de esto?"></textarea>
+  <span class="cerr" id="cf-err">Escribe tu nombre y el comentario.</span>
+  <div class="cform-f"><button type="button" class="cbtn" id="cf-cancel">Cancelar</button><button type="submit" class="cbtn cbtn-p">Guardar</button></div>
+</form>
+
+<!-- Panel de comentarios -->
+<aside class="cpanel" id="cpanel" aria-labelledby="cp-h">
+  <div class="cp-h"><h2 id="cp-h">Comentarios</h2><button type="button" class="cbtn" id="cp-close" aria-label="Cerrar panel"><svg class="ic"><use href="#i-x"/></svg></button></div>
+  <div class="cp-tools">
+    <button type="button" class="cbtn" id="cp-copy"><svg class="ic" style="width:16px;height:16px;vertical-align:-3px"><use href="#i-copy"/></svg> Copiar para WhatsApp</button>
+    <button type="button" class="cbtn" id="cp-dl"><svg class="ic" style="width:16px;height:16px;vertical-align:-3px"><use href="#i-download"/></svg> Descargar</button>
+    <button type="button" class="cbtn" id="cp-imp"><svg class="ic" style="width:16px;height:16px;vertical-align:-3px"><use href="#i-upload"/></svg> Importar</button>
+    <button type="button" class="cbtn" id="cp-pins" aria-pressed="true"><svg class="ic" style="width:16px;height:16px;vertical-align:-3px"><use href="#i-eye"/></svg> Marcas</button>
+    <button type="button" class="cbtn" id="cp-clear"><svg class="ic" style="width:16px;height:16px;vertical-align:-3px"><use href="#i-trash"/></svg> Borrar todo</button>
+  </div>
+  <div class="cp-list" id="cp-list"></div>
+</aside>
+<input type="file" id="imp-file" accept="application/json,.json" hidden>
+<div class="toast" id="toast" role="status"></div>
+</body>
+</html>
